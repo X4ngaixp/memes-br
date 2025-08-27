@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: pinterest-memes-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python pinterest_memes_api.py
+    envVars:
+      - key: PORT
+        value: 10000 
